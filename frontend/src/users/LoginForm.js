@@ -31,18 +31,14 @@ async function handleSubmit(e) {
     const data = await response.json()
 
     if (response.status === 200) {
-        setCurrentUser(date.user)
+        setCurrentUser(data.user)
         history.push('/')
     } else
         setErrorMessage(data.message)
     }
 
-
-    
-    console.log(data)
   
-
-    }
+}
 
     return (
         <main>
